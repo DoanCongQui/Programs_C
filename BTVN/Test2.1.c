@@ -1,25 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+    /* Ghi chu: 
+    Ki tu (*): Co the thay the value  
+    isPrime: So nguyen to
+    isExist: Da ton tai 
+    */ 
+    int arr[5] = {1, 2, 3, 4, 5};
 
-    // Nhập số phần tử của mảng
-    printf("Nhap so phan tu cua mang: ");
-    scanf("%d", &n);
-
-    // Khai báo mảng
-    int arr[n];
-
-    // Nhập các phần tử của mảng
-    printf("Nhap mang:\n");
-    for (int i = 0; i < n; i++) {
-        printf("arr[%d] = ", i);
-        scanf("%d", &arr[i]);
-    }
-
-    // Tìm và in ra các số nguyên tố trong mảng
     printf("Cac so nguyen to trong mang: ");
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < 5; i++) {               //*
         int isPrime = 1;
         if (arr[i] < 2) {
             isPrime = 0;
@@ -32,7 +22,7 @@ int main() {
             }
         }
         if (isPrime) {
-            // Ktra có chung gia tri trong mang không
+            // Kiem tra có chung gia tri trong mang khong
             int isExist = 0;
             for (int k = 0; k < i; k++) {
                 if (arr[k] == arr[i]) {
@@ -48,9 +38,9 @@ int main() {
     }
     printf("\n");
 
-    // Tìm và in ra các số nguyên tố khong co trong mảng
+    // Tim va in ra so nguyen khong co trong mang
     printf("Mang khong chua cac so nguyen to: ");
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < 5; i++){           //*
         int isPrime = 1;
         if (arr[i] < 2) {
             isPrime = 0;
@@ -63,7 +53,7 @@ int main() {
             }
         }
         if (!isPrime) {
-            // Ktra có chung gia tri trong mang không
+            // Kiem tra có chung gia tri trong mang không
             int isExist = 0;
             for (int k = 0; k < i; k++) {
                 if (arr[k] == arr[i]) {
